@@ -1,5 +1,10 @@
 package juegosdeguerra;
 
+<<<<<<< HEAD
+public interface VehiculoGuerra {
+	int atacar();
+	int defender();
+=======
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -100,4 +105,5 @@ public abstract class VehiculoGuerra implements Tripulable {
         
     }
 
+>>>>>>> branch 'JuegosDeGuerra' of https://github.com/FreddyP27/JuegosDeGuerra.git
 }
