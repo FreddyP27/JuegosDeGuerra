@@ -22,14 +22,14 @@ public class NaveDestructora extends VehiculoGuerra {
 
 	@Override
 	public int getDefensa() {
-		int defensaGuerreros=0;
+		int defensasGuerreros=0;
 		double sumarDefensa= Math.random()*0.05;
 		
 		for(Guerrero guerrero: this.getGuerrero()) {
-			defensaGuerreros += guerrero.getResistencia();
+			defensasGuerreros += guerrero.getResistencia();
 		}
 		
-		int defensaTotal= (int) (this.defender(0)*(Math.random()*0.1)+(defensaGuerreros*sumarDefensa));
+		int defensaTotal= (int) (this.defender(0)*(Math.random()*0.1)+(defensasGuerreros*sumarDefensa));
 		return defensaTotal;
 	}
 	
