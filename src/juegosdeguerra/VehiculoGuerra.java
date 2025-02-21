@@ -2,11 +2,8 @@ package juegosdeguerra;
 
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-
-import juegosdeguerra.interfaces.Tripulable; // se debe importar para que funcione
+import juegosdeguerra.interfaces.Tripulable;
 
 public abstract class VehiculoGuerra implements Tripulable {
 
@@ -90,6 +87,7 @@ public abstract class VehiculoGuerra implements Tripulable {
             System.out.println("Vehiculo de guerra lleno");
         }else{
             this.guerrero.add(guerrero);
+            System.out.println("El guerero se embarco con exito");
         }
         
     }
