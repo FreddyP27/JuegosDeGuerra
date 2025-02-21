@@ -23,6 +23,14 @@ public abstract class VehiculoGuerra implements Tripulable {
         this.defensa = defensa;
         this.nombre = nombre;
         this.guerrero = new ArrayList<>();
+        
+        if(this.ataque + this.defensa >10) {
+        	this.ataque=5;
+        	this.defensa=5;
+        }else {
+        	this.ataque = ataque;
+        	this.defensa = defensa;
+        }
     }
 
     public int getPuntosVida() {

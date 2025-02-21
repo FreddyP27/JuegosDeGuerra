@@ -11,6 +11,9 @@ public abstract class Guerrero {
     private int resistencia;
 
     public Guerrero(String nombre, String tipo, int fuerza, int resistencia) {
+    	if(this.fuerza + this.resistencia > 10) {
+    		System.out.println("La suma de fuera y resistencia no puede ser mayor que 10");
+    	}
         this.nombre = nombre;
         this.tipo = tipo;
         this.fuerza = fuerza;
