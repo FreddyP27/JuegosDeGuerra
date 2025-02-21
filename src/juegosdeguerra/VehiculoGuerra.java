@@ -1,6 +1,7 @@
 package juegosdeguerra;
 
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -16,25 +17,13 @@ public abstract class VehiculoGuerra implements Tripulable {
     private List <Guerrero>guerrero;
 
     
-    public VehiculoGuerra(int puntosVida, int ataque, int defensa, String nombre, List<Guerrero> guerrero) {
-        this.puntosVida = puntosVida;
+    public VehiculoGuerra(String nombre, int ataque, int defensa) {
+        this.puntosVida = 1000;
         this.ataque = ataque;
         this.defensa = defensa;
         this.nombre = nombre;
-        this.guerrero = guerrero;
+        this.guerrero = new ArrayList<>();
     }
-
-    
-
-
-    public VehiculoGuerra(int puntosVida, int ataque, int defensa) {
-        this.puntosVida = puntosVida;
-        this.ataque = ataque;
-        this.defensa = defensa;
-    }
-
-
-
 
     public int getPuntosVida() {
         return puntosVida;
@@ -86,17 +75,21 @@ public abstract class VehiculoGuerra implements Tripulable {
     }
 
     
-    private void embarcarGuerrero(){
+    @Override
+    public int atacar() {
+        return 0;
+    }
 
-        //List<String,List<Guerrero>> this.guerrero = new LinkedList<>(); 
-        List<VehiculoGuerra> vehiculoGuerras = new CopyOnWriteArrayList<>();
+    @Override
+    public int defender(int ataqueRecibido) {
+        return 0;
+    }
 
-        for (VehiculoGuerra vehiculoGuerra : vehiculoGuerras) {
-            vehiculoGuerra.setPuntosVida(puntosVida);
-            vehiculoGuerra.setAtaque(ataque);
-            vehiculoGuerra.setDefensa(defensa);
-            vehiculoGuerra.setNombre(nombre);
-            vehiculoGuerra.setGuerrero(guerrero);
+    private void embarcarGuerrero(Guerrero guerrero){
+        if(this.guerrero.size()>10){
+            System.out.println("Vehiculo de guerra lleno");
+        }else{
+            this.guerrero.add(guerrero);
         }
         
     }

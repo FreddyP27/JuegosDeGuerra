@@ -2,7 +2,6 @@ package juegosdeguerra;
 
 public abstract class Guerrero {
 
-
     private String nombre;
 
     private String tipo;
