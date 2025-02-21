@@ -87,7 +87,7 @@ public abstract class VehiculoGuerra implements Tripulable {
             System.out.println("Vehiculo de guerra lleno");
         }else{
             this.guerrero.add(guerrero);
-            System.out.println("El guerero se embarco con exito");
+            System.out.println("El guerrero se embarco con exito");
         }
         
     }
