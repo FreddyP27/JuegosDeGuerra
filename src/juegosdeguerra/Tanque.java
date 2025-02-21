@@ -7,6 +7,18 @@ public class Tanque extends VehiculoGuerra {
       
     }
 
+	@Override
+	public int atacar() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int defender() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
     
 
 

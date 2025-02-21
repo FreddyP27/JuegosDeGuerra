@@ -2,11 +2,8 @@ package juegosdeguerra.interfaces;
 
 public interface Tripulable {
 
-<<<<<<< HEAD
-=======
+    int atacar();
 
-    private int atacar();
+    int defender(); 
 
-    private int defender(); 
->>>>>>> branch 'JuegosDeGuerra' of https://github.com/FreddyP27/JuegosDeGuerra.git
 }

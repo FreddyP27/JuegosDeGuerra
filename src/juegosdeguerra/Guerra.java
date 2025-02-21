@@ -10,7 +10,7 @@ public class Guerra {
     }
 
     private void llenarNaves(){
-        Guerrero guerrero1 = new Guerrero(null, null, 0, 0);
+       
     }
 
 }
