@@ -5,6 +5,19 @@ public class Soldado extends Guerrero{
     public Soldado(String nombre, String tipo, int fuerza, int resistencia) {
         super(nombre, tipo, fuerza, resistencia);
     }
+
+	@Override
+	public int aportarAtaque() {
+		// TODO Auto-generated method stub
+		return this.getFuerza();
+	}
+
+	@Override
+	public int aportarDefensa() {
+		// TODO Auto-generated method stub
+		return this.getResistencia();
+	}
+    
     
 
 

@@ -51,9 +51,10 @@ public abstract class Guerrero {
     public void setResistencia(int resistencia) {
         this.resistencia = resistencia;
     }
-
     
+    public abstract int aportarAtaque();
     
+    public abstract int aportarDefensa();
     
 
 }

@@ -1,38 +1,42 @@
 package juegosdeguerra;
 
-public class NaveDestructora extends VehiculoGuerra {
+import juegosdeguerra.interfaces.Tripulable;
 
+public class NaveDestructora extends VehiculoGuerra implements Tripulable {
+	private int ataqueBase = 5;
+	private int defensaBase = 5;
 	public NaveDestructora(String nombre, int ataque, int defensa) {
 		super(nombre, ataque, defensa);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
-	public int getAtaque() {
-		int ataquesGuerreros=0;
-		double sumarAtaque = Math.random()*0.05;
+	public int atacar() {
+		int ataqueTotal = (int) (ataqueBase * Math.random()*0.1); //ATAQUE DEL VEHICULO * RANDOM (0,1)
 		
-		for(Guerrero guerrero: this.getGuerrero()) {
-			ataquesGuerreros += guerrero.getFuerza();
-		} 
+		//SUMAR EL APORTE DE ATAQUE DE LOS GUERREROS
+		for(Guerrero guerrero : this.getGuerrero()) {
+			ataqueTotal += (int) (guerrero.aportarAtaque() * Math.random()*0.5);
+		}
 		
-		int ataqueTotal = (int) (this.atacar()*(Math.random()*0.1)+(ataquesGuerreros*sumarAtaque));
+		System.out.println(this.getNombre() + " ataca con " + ataqueTotal + " puntos");
 		return ataqueTotal;
 	}
 
 	@Override
-	public int getDefensa() {
-		int defensasGuerreros=0;
-		double sumarDefensa= Math.random()*0.05;
+	public int defender(int ataqueRecibido) {
+		int defensaTotal = (int) (defensaBase * Math.random()*0.1);
 		
-		for(Guerrero guerrero: this.getGuerrero()) {
-			defensasGuerreros += guerrero.getResistencia();
+		//SUMAR EL APORTE DE DEFENSA DE LOS GUERREROS
+		for(Guerrero guerrero : this.getGuerrero()) {
+			defensaTotal += (int) (guerrero.aportarDefensa() * Math.random()*0.5);
 		}
 		
-		int defensaTotal= (int) (this.defender(0)*(Math.random()*0.1)+(defensasGuerreros*sumarDefensa));
+		int destruccion = Math.max(0,ataqueRecibido - defensaTotal); //MATH.MAX METODO QUE DEVUELVE EL MAYOR DE DOS NUMEROS EL 0 EVITA QUE SEA UN NUMERO NEGATIVO
+		destruccion -= this.getPuntosVida();
+		this.setPuntosVida(destruccion);
+		
+		System.out.println(this.getNombre() + " se defiende con " + defensaTotal + " puntos y pierde " + destruccion + " puntos de vida");
 		return defensaTotal;
 	}
-	
-	
-
 }
