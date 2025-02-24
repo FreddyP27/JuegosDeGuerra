@@ -9,7 +9,7 @@ public class Guerra {
        Tanque tanque1 = new Tanque("T1", 5, 5);  //linea construido por Sergio
        NaveDestructora nave1 = new NaveDestructora("N1", 5, 5);
        
-       //CREAR GUERREROS
+      //CREAR GUERREROS
        Soldado soldado1 = new Soldado("S1","humano", 5, 3); //Clase soldado construido por Marcela
        Soldado soldado2 = new Soldado("S2","humano", 6,2);
        Soldado alienigena1 = new Soldado("A1","extraterrestre", 4, 4);
