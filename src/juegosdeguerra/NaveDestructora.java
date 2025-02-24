@@ -3,10 +3,16 @@ package juegosdeguerra;
 import juegosdeguerra.interfaces.Tripulable;
 
 public class NaveDestructora extends VehiculoGuerra implements Tripulable {
+	private int ataqueBase = 7;
+	private int defensaBase = 5;
 
 	public NaveDestructora(String nombre, int ataque, int defensa) {
 		super(nombre, ataque, defensa);
 		
+	}
+	
+	public NaveDestructora(String nombre) {
+		super(nombre, 7, 5);
 	}
 
 	@Override

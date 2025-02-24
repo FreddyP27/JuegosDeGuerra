@@ -1,9 +1,15 @@
 package juegosdeguerra;
 
 public class Tanque extends VehiculoGuerra {
-
+	//private int ataqueBase = 7;
+	//private int defensaBase = 5;
+	
     public Tanque(String nombre, int ataque, int defensa) {
         super(nombre, ataque, defensa);
+    }
+    
+    public Tanque(String nombre) {
+    	super(nombre, 7, 5);
     }
 
 
