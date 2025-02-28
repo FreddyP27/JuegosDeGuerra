@@ -19,7 +19,7 @@ public class Guerra {
        tanque.embarcarGuerrero(soldado1);
        tanque.embarcarGuerrero(soldado2);
        nave.embarcarGuerrero(alienigena1);
-       tanque.embarcarGuerrero(alienigena2);
+       tanque.embarcarGuerrero(alienigena2); //excepcion
        
        //EMPIEZA LA GUERRA
        System.out.println("EMPIEZA LA GUERRA");
