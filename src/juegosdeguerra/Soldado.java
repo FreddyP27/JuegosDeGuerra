@@ -8,13 +8,13 @@ public class Soldado extends Guerrero{
 
 	@Override
 	public int aportarAtaque() {
-		// TODO Auto-generated method stub
+	
 		return this.getFuerza();
 	}
 
 	@Override
 	public int aportarDefensa() {
-		// TODO Auto-generated method stub
+		
 		return this.getResistencia();
 	}
     
